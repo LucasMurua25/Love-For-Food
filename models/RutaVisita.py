@@ -5,3 +5,12 @@ class RutaVisita:
         self.id = id
         self.nombre = nombre
         self.destinos = destinos
+
+
+    def to_json():
+        pass
+
+
+    @classmethod
+    def from_json(cls,data):
+        pass
