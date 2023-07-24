@@ -1,4 +1,4 @@
-
+import json
 
 class RutaVisita:
     def __init__(self, id: int, nombre: str, destinos: list[int]):
@@ -7,10 +7,13 @@ class RutaVisita:
         self.destinos = destinos
 
 
-    def to_json():
-        pass
+    def to_json(self):
+        return {"id":self.id, 
+                "nombre":self.nombre,
+                "destinos":self.destinos,}
 
 
     @classmethod
-    def from_json(cls,data):
-        pass
+    def from_json(cls, json_data):
+        data = json.loads(json_data)
+        return cls(data["id"],data["nombre"],data["destinos"])
