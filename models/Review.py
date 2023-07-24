@@ -1,4 +1,4 @@
-
+import json
 class Review:
     def __init__(self, id: int, id_destino: int, id_usuario: int, calificacion: int, comentario: str, animo: str):
 
@@ -14,10 +14,16 @@ class Review:
         self.animo = animo 
 
 
-    def to_json():
-        pass
+    def to_json(self):
+        return {"id":self.id, 
+                "id_destino":self.id_destino,
+                "id_usuario":self.id_usuario, 
+                "calificacion":self.calificacion,
+                "comentario":self.comentario,
+                "animo":self.animo}
 
 
     @classmethod
-    def from_json(cls,data):
-        pass
+    def from_json(cls, json_data):
+        data = json.loads(json_data)
+        return cls(data["id"],data["id_destino"],data["id_usuario"],data["calificacion"],data["comentario"],data["animo"])

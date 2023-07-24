@@ -1,4 +1,4 @@
-
+import json
 
 class Usuario:
     def __init__(self, id: int, nombre: str, apellido: str, historial_rutas: list[int]):
@@ -9,7 +9,10 @@ class Usuario:
 
 
     def to_json(self):
-        return {"id":self.id, "nombre":self.nombre, "apellido":self.apellido, "historial_rutas":self.historial_rutas}
+        return {"id":self.id, 
+                "nombre":self.nombre,
+                "apellido":self.apellido, 
+                "historial_rutas":self.historial_rutas}
 
 
     @classmethod
