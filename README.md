@@ -1,3 +1,2 @@
 # LoveForFood
-# LoveForFood
 Food Travel
