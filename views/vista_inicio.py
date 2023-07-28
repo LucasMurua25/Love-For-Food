@@ -1,38 +1,26 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as ctk
+from customtkinter import CTkLabel
+from PIL import ImageTk, Image
 
 
-
-class VisualizacionImagen:
-
-    def __init__(self, master):
-        self.master = master
-        self.inicializar_gui()
-
-    def inicializar_gui(self):
-        canvas = tk.Canvas(self.master, width=667, height=380)
-        canvas.pack()
-
-        img_logo_python = tk.PhotoImage(file='tkinterlogo.png')
-        canvas.create_image(0, 0, anchor=tk.NW, image=img_logo_python)
-        canvas.image = img_logo_python
-
-         # Crea un boton de inicio
-        button = ttk.Button(self.master, text="Inicio", style="my.TButton")
-        button.pack()
-
-         # Cambia el color de fondo del boton 
-        style = ttk.Style()
-        style.configure("my.TButton", background="orange")
+class App(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+        self.title("LoveForFood V1.0")
+        self.geometry("650x550")
+       
+        # Cargar la imagen de fondo
+        image = Image.open("e:/Ariel/Desktop/ctkinter/tkinterlogo.png")
+        photo = ImageTk.PhotoImage(image)
+        
+        # Agregar la imagen de fondo a un widget Label
+        label = CTkLabel(self, text="" ,image=photo)
+        label.place(x=0, y=0, relwidth=1, relheight=1)
+        
+        # Botón de inicio de sesión
+        boton = ctk.CTkButton(self, text="Iniciar sesión",  fg_color="#FA5F39")
+        boton.place(x=250, y=350)
 
     
-def main():
-    root = tk.Tk()
-    root.title('LoveForFood V1.0')
-
-    ventana = VisualizacionImagen(root)
-
-    root.mainloop()
-
-if __name__ == "__main__":
-    main()
+app = App()
+app.mainloop()
