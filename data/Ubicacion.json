@@ -1,5 +1,32 @@
-{
-    "id" : "id",
-    "direccion" : "direccion",
-    "coordenadas" : "coordenadas"
-}
+[
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    },
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    },
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    },
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    },
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    },
+    {
+        "id" : "id",
+        "direccion" : "direccion",
+        "coordenadas" : "coordenadas"
+    }
+]
