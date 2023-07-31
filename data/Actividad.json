@@ -1,0 +1,38 @@
+[
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    },
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    },
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    },
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    },
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    },
+    {
+        "id" : "id",
+        "nombre" : "nombre",
+        "destino_id" : "destino_id",
+        "hora_inicio" : "hora_inicio"
+    }
+]
