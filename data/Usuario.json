@@ -1,38 +1,38 @@
 [
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "1",
+    "nombre" : "Lucuas",
+    "apellido" : "Murua",
+    "historial_rutas" : []
     },
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "2",
+    "nombre" : "Bruno",
+    "apellido" : "Guantay",
+    "historial_rutas" : []
     },
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "3",
+    "nombre" : "Ariel",
+    "apellido" : "Maurizzio",
+    "historial_rutas" : []
     },
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "4",
+    "nombre" : "Juan",
+    "apellido" : "Bellido",
+    "historial_rutas" : []
     },
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "5",
+    "nombre" : "Osvaldo",
+    "apellido" : "Romano",
+    "historial_rutas" : []
     },
     {
-    "id" : "id",
-    "nombre" : "nombre",
-    "apellido" : "apellido",
-    "historial_rutas" : "historial_rutas"
+    "id" : "6",
+    "nombre" : "Cecilia",
+    "apellido" : "Velasquez",
+    "historial_rutas" : []
     }
 ]
