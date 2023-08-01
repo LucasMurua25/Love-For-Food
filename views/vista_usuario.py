@@ -14,7 +14,7 @@ class App(ctk.CTk):
        
         # Cargar la imagen de fondo
 
-        image = Image.open("e:/Ariel/Desktop/ctkinter/tkinterlogo.png")
+        image = Image.open("views/image/tkinterlogo.png")
         photo = ImageTk.PhotoImage(image)
         ctk.set_default_color_theme("dark-blue")
         
