@@ -1,32 +1,32 @@
 [
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "1",
+        "direccion" : "O'Higgins 575",
+        "coordenadas" : [-24.7761,-65.4093]
     },
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "2",
+        "direccion" : "Balcarce 999",
+        "coordenadas" : [-24.7778,-65.4114]
     },
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "3",
+        "direccion" : "12 de Octubre 756",
+        "coordenadas" : [-24.7746,-65.4117]
     },
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "4",
+        "direccion" : "Bartolomé Mitre 1086",
+        "coordenadas" : [-24.7763,-65.4096]
     },
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "5",
+        "direccion" : "12 de Octubre 581",
+        "coordenadas" : [ -24.7750,-65.4092]
     },
     {
-        "id" : "id",
-        "direccion" : "direccion",
-        "coordenadas" : "coordenadas"
+        "id" : "6",
+        "direccion" : "O'Higgins 903",
+        "coordenadas" : [-24.7758,-65.4138]
     }
 ]
