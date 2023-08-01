@@ -10,7 +10,7 @@ class App(ctk.CTk):
         self.geometry("650x550")
        
         # Cargar la imagen de fondo
-        image = Image.open("e:/Ariel/Desktop/ctkinter/tkinterlogo.png")
+        image = Image.open("views/image/tkinterlogo.png")
         photo = ImageTk.PhotoImage(image)
         
         # Agregar la imagen de fondo a un widget Label
