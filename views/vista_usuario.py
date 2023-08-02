@@ -2,7 +2,7 @@ import customtkinter as ctk
 from customtkinter import CTkLabel
 from PIL import ImageTk, Image
 from tkinter import messagebox
-
+import os
 
 class App(ctk.CTk):
     def __init__(self):
@@ -14,7 +14,8 @@ class App(ctk.CTk):
        
         # Cargar la imagen de fondo
 
-        image = Image.open("views/image/tkinterlogo.png")
+        current_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+        image = Image.open(os.path.join(current_path,"image","tkinterlogo.png"))
         photo = ImageTk.PhotoImage(image)
         ctk.set_default_color_theme("dark-blue")
         
