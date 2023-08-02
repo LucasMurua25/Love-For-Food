@@ -11,18 +11,18 @@
     },
     {
         "id" : 3,
-        "direccion" : "12 de Octubre 756",
-        "coordenadas" : [-24.7746,-65.4117]
+        "direccion" : "Bartolomé Mitre 1199",
+        "coordenadas" : [-24.7749, -65.4096]
     },
     {
         "id" : 4,
-        "direccion" : "Bartolomé Mitre 1086",
-        "coordenadas" : [-24.7763,-65.4096]
+        "direccion" : "Balcarce 875",
+        "coordenadas" : [-24.7790, -65.4115]
     },
     {
         "id" : 5,
-        "direccion" : "12 de Octubre 581",
-        "coordenadas" : [ -24.7750,-65.4092]
+        "direccion" : "Balcarce 252",
+        "coordenadas" : [ -24.7867, -65.4120]
     },
     {
         "id" : 6,
