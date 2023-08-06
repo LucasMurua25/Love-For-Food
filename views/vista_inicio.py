@@ -5,7 +5,7 @@ import os
 customtkinter.set_appearance_mode("dark")
 
 
-class App(customtkinter.CTk):
+class PantallaInicio(customtkinter.CTk):
     width = 900
     height = 600
 
@@ -24,6 +24,7 @@ class App(customtkinter.CTk):
         )
         self.bg_image_label = customtkinter.CTkLabel(self, image=self.bg_image)
         self.bg_image_label.grid(row=1, column=5)
+        
 
        # crear el frame de Inicio
         self.login_frame = customtkinter.CTkFrame(self, corner_radius=0)

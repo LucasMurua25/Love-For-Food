@@ -2,7 +2,7 @@ import customtkinter as ctk
 from PIL import Image
 import os
 
-class App(ctk.CTk):
+class Nom(ctk.CTk):
     def __init__(self):
         super().__init__()
         # Campos de entrada para el nombre y apellido

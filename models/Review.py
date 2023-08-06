@@ -1,5 +1,5 @@
 import json
-class Review:
+class Rw:
     def __init__(self, id: int, id_destino: int, id_usuario: int, calificacion: int, comentario: str, animo: str):
 
         """

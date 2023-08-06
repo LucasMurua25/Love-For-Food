@@ -7,7 +7,7 @@
         "precio_minimo" : "2200",
         "precio_maximo" : "4500",
         "popularidad" : "3 estrellas",
-        "disponibilidad" : "Lunes a domingo de 11:00 hs a 15:00 hs y de 21:00 hs a 12:00hs",
+        "disponibilidad" : "Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "LaMonumentalSalta.png"
     },
@@ -19,7 +19,7 @@
         "precio_minimo" : "1800",
         "precio_maximo" : "3400",
         "popularidad" : "2 estrellas",
-        "disponibilidad" : "Martes a domingo de 11:00hs a 15:00hs y de 21:00hs a 2:00hs",
+        "disponibilidad" : "No Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "ElBuenGusto.png"
     },
@@ -31,7 +31,7 @@
         "precio_minimo" : "2000",
         "precio_maximo" : "5000",
         "popularidad" : "3.5 estrellas",
-        "disponibilidad" : "Lunes a sabado de 9:00 hs a 12:30 hs y de 18:30 hs a 22:00 hs",
+        "disponibilidad" : "Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "IlSapore.png"
     },
@@ -43,7 +43,7 @@
         "precio_minimo" : "2500",
         "precio_maximo" : "5500",
         "popularidad" : "4 estrellas",
-        "disponibilidad" : "Lunes a domingo de 20:00 hs a 3:00 ",
+        "disponibilidad" : "Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "LaViejaEstacion.png"
     },
@@ -55,7 +55,7 @@
         "precio_minimo" : "1700",
         "precio_maximo" : "3500",
         "popularidad" : "3 estrellas",
-        "disponibilidad" : "Lunes a domingo de 20:00 hs a 3:00 ",
+        "disponibilidad" : "Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "CrostiPollo.png"
     },
@@ -67,7 +67,7 @@
         "precio_minimo" : "4000",
         "precio_maximo" : "15000",
         "popularidad" : "4.5 estrellas",
-        "disponibilidad" : "Lunes a sabado de 11:00 hs a 12:30 hs y de 20:30 hs a 22:00hs",
+        "disponibilidad" : "Disponible",
         "id_ubicacion" : "id_ubicacion",
         "imagen" : "ElMeson.png"
     }

@@ -5,9 +5,10 @@ import customtkinter
 from customtkinter import CTkLabel, CTk
 
 from PIL import ImageTk, Image
+#from views.vista_usuario import Nom
 
-from views import vista_inicio, vista_usuario
-
+#from views.vista_inicio import *
+#from views import *
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -31,8 +32,8 @@ class App(customtkinter.CTk):
 
     def button_callback(self):
         print("button clicked")
-        vista_inicio.grid_forget()  # eliminar el frame principal
-        vista_usuario.grid(row=0, column=0, sticky="ns")  # mostrar el frame de login 
+        App.vista_inicio.grid_forget()  # eliminar el frame principal
+        Nom.vista_usuario.grid(row=0, column=0, sticky="ns")  # mostrar el frame de login 
 
 if __name__ == "__main__":
     app = App()

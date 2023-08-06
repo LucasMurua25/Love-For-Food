@@ -1,6 +1,6 @@
 import json
 
-class Usuario:
+class Us:
     def __init__(self, id: int, nombre: str, apellido: str, historial_rutas: list[int]):
         self.id = id
         self.nombre = nombre
