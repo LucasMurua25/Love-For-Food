@@ -4,6 +4,7 @@ from PIL import ImageTk, Image
 import os
 
 
+
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
