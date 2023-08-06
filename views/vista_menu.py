@@ -3,7 +3,7 @@ from customtkinter import CTkLabel
 from PIL import ImageTk, Image
 
 
-class App(ctk.CTk):
+class Menu(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("LoveForFood V1.0")
@@ -27,7 +27,7 @@ class App(ctk.CTk):
         boton4 = ctk.CTkButton(self, text="Review y Calificaciones",  fg_color="#FA5F39")
         boton4.place(x=475, y=200)
 
-
+        
     
 app = App()
 app.mainloop()

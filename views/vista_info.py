@@ -14,8 +14,7 @@ class VistaInfo(tk.Frame):
         self.destino_label.config(justify=tk.LEFT)
         self.boton_regresar = tk.Button(
             self,
-            text="Regresar al menú de búsqueda",
-            command=self.controlador.regresar_destino,
+            text="Regresar al menú de búsqueda"
         )
         self.boton_regresar.pack(pady=10)
 
@@ -24,3 +23,6 @@ class VistaInfo(tk.Frame):
         Muestra la información del destino recibido como parámetro.
         """
         info = f"Nombre : {DestinoCulinario.nombre}\n Ubicación: {DestinoCulinario.id}\n Tipo De Cocina: {DestinoCulinario.tipo_cocina}\n Popularidad: {DestinoCulinario.popularidad}\n Ingredientes Ocupados: {DestinoCulinario.ingredientes} \n Disponibilidad: {DestinoCulinario.disponibilidad}\nDireccion: {DestinoCulinario.id_ubicacion}\n Precio Maximo: $ {DestinoCulinario.precio_maximo} Precio Minimo: ${DestinoCulinario.precio_minimo} \n{DestinoCulinario.imagen} "
+
+App = VistaInfo()
+App.mainloop()

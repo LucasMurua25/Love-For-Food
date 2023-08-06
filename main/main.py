@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from customtkinter import CTkLabel
 from PIL import ImageTk, Image
-
+from views.vista_inicio import VistaInicio
 
 class App(ctk.CTk):
     def __init__(self):
@@ -18,9 +18,10 @@ class App(ctk.CTk):
         label.place(x=0, y=0, relwidth=1, relheight=1)
 
         # Botón de inicio de sesión
-        boton = ctk.CTkButton(self, text="Iniciar sesión",  fg_color="#FA5F39")
+        boton = ctk.CTkButton(self, text="Iniciar sesión",  fg_color="#FA5F39", command=self.iniciar_sesion)
         boton.place(x=250, y=350)
 
+   
    
 if __name__ == "__main__":
     app = App()

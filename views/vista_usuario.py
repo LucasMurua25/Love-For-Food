@@ -26,15 +26,15 @@ class App(ctk.CTk):
         # Campos de entrada para el nombre y apellido
     
         usuario= ctk.CTkEntry(self, placeholder_text="Usuario")
-        usuario.place(x=90, y=200)
+        usuario.place(x=250, y=150)
         
         contrasenia = ctk.CTkEntry(self, placeholder_text="Contraseña",show="*")
-        contrasenia.place(x=90, y=250)
+        contrasenia.place(x=250, y=200)
     
         # Botón de inicio de sesión
 
         boton = ctk.CTkButton(self, text="Ingresar", command=self.iniciar_sesion, fg_color="#FA5F39")
-        boton.place(x=90, y=300)
+        boton.place(x=250, y=250)
 
 
     def iniciar_sesion(self):
