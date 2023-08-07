@@ -3,14 +3,14 @@ from customtkinter import CTkLabel
 from PIL import ImageTk, Image
 
 
-class Menu(ctk.CTk):
+class App(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("LoveForFood V1.0")
         self.geometry("650x550")
        
         # Cargar la imagen de fondo
-        image = Image.open("views/image/tkinterlogo.png")
+        image = Image.open("tkinterlogo.png")
         photo = ImageTk.PhotoImage(image)
         
         # Agregar la imagen de fondo a un widget Label
