@@ -33,6 +33,3 @@ class PantallaInfo(ctk.CTk):
         def mostrar_info_destino(self, DestinoCulinario):
          
          info=(f"Nombre : {DestinoCulinario.nombre}\n Ubicación: {DestinoCulinario.id}\n Tipo De Cocina: {DestinoCulinario.tipo_cocina}\n Popularidad: {DestinoCulinario.popularidad}\n Ingredientes Ocupados: {DestinoCulinario.ingredientes} \n Disponibilidad: {DestinoCulinario.disponibilidad}\nDireccion: {DestinoCulinario.id_ubicacion}\n Precio Maximo: $ {DestinoCulinario.precio_maximo} Precio Minimo: ${DestinoCulinario.precio_minimo} \n{DestinoCulinario.imagen} ")
-        
-App = PantallaInfo()
-App.mainloop()

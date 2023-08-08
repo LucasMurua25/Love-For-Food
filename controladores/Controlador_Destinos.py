@@ -1,4 +1,4 @@
-class ControladorDDestinos:
+class ControladorDestinos:
     def __init__(self, app, modelo_destino_culinario):
         self.app = app
         self.modelo_destino_culinario= modelo_destino_culinario
