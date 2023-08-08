@@ -19,7 +19,7 @@ class App(ctk.CTk):
         # Cargar la imagen de fondo
         image = Image.open("tkinterlogo.png")
         photo = ImageTk.PhotoImage(image)
-        
+    
         # Agregar la imagen de fondo a un widget Label
         label = CTkLabel(self, text="" ,image=photo)
         label.place(x=0, y=0, relwidth=1, relheight=1)
@@ -31,15 +31,15 @@ class App(ctk.CTk):
         frame_1.grid(row=0, column=0, padx=10, pady=150)
         frame_1.configure(label_text=None)
 
-        for i in range(7):
+        for i in range(6):
             ctk.CTkCheckBox(frame_1,).grid(row=i, padx=10, pady=10,sticky="w")
-        frame_1.children["!ctkcheckbox"].configure(text="Destinos Culinarios",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox2"].configure(text="Tipos de cocina",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox3"].configure(text="Ingredientes",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox"].configure(text="Tipos de cocina",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox2"].configure(text="Ingredientes",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox3"].configure(text="Precio Maximo",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox4"].configure(text="Precio Minimo",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox5"].configure(text="Precio Maximo",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox6"].configure(text="Popularidad",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox7"].configure(text="Actividad",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox5"].configure(text="POpularidad",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox6"].configure(text="Actividad",fg_color="#FA5F39")
+        
     
         boton1 = ctk.CTkButton(self, text="Filtrar",  fg_color="#FA5F39", command=self.resultado_filtro)
         boton1.place(x=25, y=400)
