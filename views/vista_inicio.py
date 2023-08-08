@@ -1,11 +1,11 @@
-import customtkinter
+import customtkinter as ctk
 from PIL import Image
 import os
 
-customtkinter.set_appearance_mode("dark")
+ctk.set_appearance_mode("dark")
 
 
-class PantallaInicio(customtkinter.CTk):
+class PantallaInicio(ctk.CTk):
     width = 900
     height = 600
 
@@ -18,28 +18,30 @@ class PantallaInicio(customtkinter.CTk):
 
         # cargar y crear la imagen de fondo
         current_path = os.path.dirname(os.path.realpath(__file__))
-        self.bg_image = customtkinter.CTkImage(
+        self.bg_image = ctk.CTkImage(
             Image.open(os.path.join(current_path,"image","tkinterlogo.png")),
             size=(self.width, self.height),
         )
-        self.bg_image_label = customtkinter.CTkLabel(self, image=self.bg_image)
+        self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image)
         self.bg_image_label.grid(row=1, column=5)
         
 
-       # crear el frame de Inicio
-        self.login_frame = customtkinter.CTkFrame(self, corner_radius=0)
-        self.login_frame.grid(row=1, column=5)
-        
-        self.login_button = customtkinter.CTkButton(
-            self.login_frame, text="INICIO", command=self.iniciar, width=75,
+         #INICIO
+         # crear el frame principal
+        self.main_frame = ctk.CTkFrame(self,border_width=5)
+        self.main_frame.grid_columnconfigure(1, weight=1)
+        self.main_label = ctk.CTkLabel(
+        self.main_frame,
+            text=" Bienvenido! ",
+            font=ctk.CTkFont(size=15, weight="bold",slant="italic"),
         )
-        self.login_button.grid(row=0, column=0, padx=0, pady=(0, 0))
+        self.main_label.grid(row=0, column=1, padx=(0,0), pady=(8, 5))
+        
 
-    def iniciar(self):
-        self.login_frame.grid_forget()  # eliminar el frame de inicio
-        self.main_frame.grid(row=0, column=0, sticky="nsew", padx=100)  # mostrar el frame de login  
 
-if __name__ == "__main__":
-    app = App()
-    app.mainloop()
+        #caracteristicas del boton iniciar
+        self.back_button = ctk.CTkButton(
+            self.main_frame, text="Iniciar", command=self.controlador.iniciar, width=100,border_spacing=5,font=("bold",15)
+        )
+        self.back_button.grid(row=1, column=1, padx=20, pady=(15, 15))
 
