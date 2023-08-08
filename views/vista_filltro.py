@@ -1,6 +1,8 @@
+import tkinter as tk
 import customtkinter as ctk
 from customtkinter import CTkLabel, CTkInputDialog
 from PIL import ImageTk, Image
+import json
 
 class ToplevelWindow(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
@@ -9,6 +11,8 @@ class ToplevelWindow(ctk.CTkToplevel):
         self.title("LoveForFood V1.0")
         self.label = ctk.CTkLabel(self, text="Resultado")
         self.label.pack(padx=20, pady=20)
+        self.attributes('-topmost', True)
+        
 
 class App(ctk.CTk):
     def __init__(self):
@@ -30,7 +34,7 @@ class App(ctk.CTk):
         frame_1 = ctk.CTkScrollableFrame(self, orientation="vertical", label_text="should not appear", fg_color="transparent")
         frame_1.grid(row=0, column=0, padx=10, pady=150)
         frame_1.configure(label_text=None)
-
+        # Crea los checkbox de la lista
         for i in range(6):
             ctk.CTkCheckBox(frame_1,).grid(row=i, padx=10, pady=10,sticky="w")
         frame_1.children["!ctkcheckbox"].configure(text="Tipos de cocina",fg_color="#FA5F39")
@@ -38,23 +42,21 @@ class App(ctk.CTk):
         frame_1.children["!ctkcheckbox3"].configure(text="Precio Maximo",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox4"].configure(text="Precio Minimo",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox5"].configure(text="POpularidad",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox6"].configure(text="Actividad",fg_color="#FA5F39")
-        
-    
+        frame_1.children["!ctkcheckbox6"].configure(text="Actividad",fg_color="#FA5F39")  
+        #Boton de filtrado
         boton1 = ctk.CTkButton(self, text="Filtrar",  fg_color="#FA5F39", command=self.resultado_filtro)
         boton1.place(x=25, y=400)
-
+        #Boton de regreso al menu
         boton2 = ctk.CTkButton(self, text="Regresar al menu",  fg_color="#FA5F39")
         boton2.place(x=250, y=400)
-        
-        self.toplevel_window = None
-        
+
+        self.toplevel_window = None  
+             
     def resultado_filtro(self):
-        
         if self.toplevel_window is None or not self.toplevel_window.winfo_exists():
-            self.toplevel_window = ToplevelWindow(self)  # create window if its None or destroyed
+            self.toplevel_window = ToplevelWindow(self)  # crea una ventana emergente
         else:
-            self.toplevel_window.focus()  # if window exists focus it
+            self.toplevel_window.focus()  # Hace foco en la ventana 
      
 app = App()
 app.mainloop()
