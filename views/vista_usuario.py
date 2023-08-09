@@ -1,11 +1,42 @@
 import customtkinter as ctk
-from PIL import Image
-import os 
+from customtkinter import CTkLabel
+from PIL import ImageTk, Image
+from tkinter import messagebox
+
+
+class App(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+        self.title("LoveForFood V1.0")
+        self.geometry("650x550")
+        self.button = ctk.CTkButton(self, text="Inicio", command=self.button_callbck)
+        self.button.pack(padx=0, pady=200)
+       
+        # Cargar la imagen de fondo
+
+        image = Image.open("views/image/tkinterlogo.png")
+        photo = ImageTk.PhotoImage(image)
+        ctk.set_default_color_theme("dark-blue")
+        
+        # Agregar la imagen de fondo a un widget Label
 
 ctk.set_appearance_mode("System")
 class PantallaUsuario(ctk.CTk):
     width = 900
     height = 600
+
+        # Campos de entrada para el nombre y apellido
+    
+        usuario= ctk.CTkEntry(self, placeholder_text="Usuario")
+        usuario.place(x=250, y=150)
+        
+        contrasenia = ctk.CTkEntry(self, placeholder_text="Contraseña",show="*")
+        contrasenia.place(x=250, y=200)
+    
+        # Botón de inicio de sesión
+
+        boton = ctk.CTkButton(self, text="Ingresar", command=self.iniciar_sesion, fg_color="#FA5F39")
+        boton.place(x=250, y=250)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -14,5 +14,6 @@ class Ubi:
 
     @classmethod
     def from_json(cls, json_data):
-        data = json.loads(json_data)
+        with open (json_data,"r") as f:
+            data = json.loads(f)
         return cls(data["id"],data["direccion"],data["coordenadas"])
