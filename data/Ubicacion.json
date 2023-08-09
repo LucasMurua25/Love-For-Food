@@ -10,9 +10,19 @@
         "coordenadas" : [-24.7778,-65.4114]
     },
     {
-        "id" : 3,
-        "direccion" : "Bartolomé Mitre 1199",
-        "coordenadas" : [-24.7749, -65.4096]
+        "id" : 3
+        "direccion" : "12 de Octubre 756",
+        "coordenadas" : [-24.7746,-65.4117]
+    },
+    {
+        "id" : 4,
+        "direccion" : "Bartolomé Mitre 1086",
+        "coordenadas" : [-24.7763,-65.4096]
+    },
+    {
+        "id" : 5,
+        "direccion" : "12 de Octubre 581",
+        "coordenadas" : [ -24.7750,-65.4092]
     },
     {
         "id" : 4,

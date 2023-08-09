@@ -12,6 +12,8 @@ class PantallaMenu(ctk.CTk):
         self.geometry("650x550")
        
         # Cargar la imagen de fondo
+
+        image = Image.open("tkinterlogo.png")
         current_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
         image = Image.open(os.path.join(current_path,"image","tkinterlogo.png"))
         photo = ImageTk.PhotoImage(image)
@@ -28,4 +30,11 @@ class PantallaMenu(ctk.CTk):
         boton3 = ctk.CTkButton(self, text="Planificar Visitas",  fg_color="#FA5F39")
         boton3.place(x=475, y=350)
         boton4 = ctk.CTkButton(self, text="Review y Calificaciones",  fg_color="#FA5F39")
+        boton4.place(x=475, y=200)
+
+        
+    
+app = App()
+app.mainloop()
+=======
         boton4.place(x=475, y=200)
