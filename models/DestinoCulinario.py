@@ -1,6 +1,6 @@
 import json
 
-class DeestinoCulinario:
+class DC:
     def __init__ (self, id: int,nombre: str, tipo_cocina: str, ingredientes: list[str], precio_minimo: float, precio_maximo: float, popularidad: float, disponibilidad: bool, id_ubicacion: int, imagen: str):
         self.id = id
         self.nombre = nombre
