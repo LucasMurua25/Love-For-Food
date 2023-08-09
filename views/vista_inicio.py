@@ -32,7 +32,7 @@ class PantallaInicio(ctk.CTk):
         self.main_frame.grid_columnconfigure(1, weight=1)
         self.main_label = ctk.CTkLabel(
         self.main_frame,
-            text=" Bienvenido! ",
+            text=f" Bienvenido! ",
             font=ctk.CTkFont(size=15, weight="bold",slant="italic"),
         )
         self.main_label.grid(row=0, column=1, padx=(0,0), pady=(8, 5))
