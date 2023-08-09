@@ -1,4 +1,4 @@
 #HiWorld
-from models import Actividad
-print(Actividad)
-print(type(Actividad))
+from controladores.Controlador_Destinos import ControladorDestinos
+from controladores.Controlador_Destinos import ControladorDestinos
+from controladores.Controlador_Inicio import ControladorInicio

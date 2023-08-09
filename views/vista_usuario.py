@@ -1,3 +1,4 @@
+from click import command
 import customtkinter as ctk
 from PIL import Image
 import os 
@@ -6,9 +7,8 @@ ctk.set_appearance_mode("System")
 class PantallaUsuario(ctk.CTk):
     width = 900
     height = 600
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self):
+        super().__init__()
 
         self.title("Love For Food")
         self.geometry(f"{self.width}x{self.height}")
@@ -36,7 +36,7 @@ class PantallaUsuario(ctk.CTk):
         
         self.login_label.grid(row=0, column=0, pady=(10, 10))
         self.username_entry = ctk.CTkEntry(
-            self.login_frame, width=200, placeholder_text="Nombre de usuario",
+            self.login_frame, width=200, placeholder_text="Nombre de usuario"
         )
         self.username_entry.grid(row=1, column=0, pady=(10, 10))
         self.password_entry = ctk.CTkEntry(
@@ -55,20 +55,6 @@ class PantallaUsuario(ctk.CTk):
         usuario = self.usuario.get()
         contrasenia = self.contrasenia.get()
 
-        if len(usuario.get()) == 0:
-            messagebox.showwarning("Mensaje", "El campo Usuario es obligatorio.")
-            return
-
-        if len(contrasenia.get()) == 0:
-            messagebox.showwarning("Mensaje", "El campo Contraseña es obligatorio.")
-            return
-
-        if usuario.get() == "admin" and contrasenia.get() == "admin":
-            messagebox.showinfo("Mensaje", "Bienvenido")
-        else:
-            messagebox.showwarning("Mensaje","Los datos no son validos")
-
-
     def login_event(self):
         print(
             "Presionó Login - nombre de usuario:",
@@ -76,6 +62,5 @@ class PantallaUsuario(ctk.CTk):
             "contraseña:",
             self.password_entry.get(),
         )
-
-pantalla1 = PantallaUsuario()
-pantalla1.mainloop()
+        self.login_frame.grid_forget()
+        self.login_frame.place_forget()
