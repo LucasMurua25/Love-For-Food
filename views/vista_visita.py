@@ -126,6 +126,3 @@ class MapRut(ctk.CTk):
 
     def start(self):
         self.mainloop()
-if __name__ == "__main__":
-    app = MapRut()
-    app.mainloop()
