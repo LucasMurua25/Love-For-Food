@@ -25,7 +25,7 @@ class VistaFiltro(ctk.CTk):
         
         # Cargar la imagen de fondo
         current_path = os.path.dirname(os.path.realpath(__file__))
-        self.bg_image = ctk.CTkImage( Image.open(os.path.join(current_path,"image","tkinterlogo.png")),
+        self.bg_image = ctk.CTkImage( Image.open(os.path.join(current_path,"assets","tkinterlogo.png")),
         size=(self.width, self.height))
     
         # Agregar la imagen de fondo a un widget Label

@@ -2,6 +2,7 @@ import os
 from typing import Any
 import customtkinter as ctk
 from PIL import Image
+from models.Actividad import Actividad
 from models.DestinoCulinario import DC
 from models.Ubicacion import Ubi
 from models.Usuario import Us
@@ -19,9 +20,8 @@ from controladores.Controlador_Inicio import ControladorInicio
 #from controladores.Controlador_Filtro import ControladorFiltro
 #from controladores.Controlador_Ruta import ControladorRuta
 #from controladores.Controlador_Menu import ControladorMenu
-import json
+import os
 
-ctk.set_appearance_mode("System")
 
 class App(ctk.CTk):
     width = 900
@@ -36,37 +36,39 @@ class App(ctk.CTk):
         # cargar y crear la imagen de fondo
         current_path = os.path.dirname(os.path.realpath(__file__))
         self.bg_image = ctk.CTkImage(
-            Image.open(os.path.join(current_path,"image","tkinterlogo.png"),
+            Image.open(os.path.join(current_path,"assets","tkinterlogo.png"),
             size=(self.width, self.height)))
         self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image,text="")
         self.bg_image_label.grid(row=0, column=0)
 
     def inicializar(self):
-        destinos = DC.from_json("data/DestinoCulinario.json")
-        usuarios= Us.from_json("data/Usuario.json")
-        ubicacion= Ubi.from_json("data/Ubicacion.json")
-        Controlador_Usuario= ControladorUsuario(self)
+       # destinos = DC.from_json("data/DestinoCulinario.json")
+       # usuarios= Us.from_json("data/Usuario.json")
+      #  ubicacion= Ubi.from_json("data/Ubicacion.json")
+     #   actividad=Actividad.from_json("data/Actividad.json")
+
+     #   Controlador_Usuario= ControladorUsuario(self,usuarios)
         Controlador_Inicio= ControladorInicio(self)
-        Controlador_Menu=(self)
-        Controlador_Destinos = ControladorDestinos(self, ubicacion)
-        Controlador_Info = ControladorInfo(self)
+       # Controlador_Menu=(self,usuarios)
+       # Controlador_Destinos = ControladorDestinos(self, ubicacion,destinos)
+       # Controlador_Info = ControladorInfo(self,actividad)
         #Controlador_Filtro=ControladorFiltro(self, destinos)
         #Controlador_Ruta=ControladorRuta(self)
 
-        self.vista_usuario= PantallaUsuario(Controlador_Usuario)
+       # self.vista_usuario= PantallaUsuario(Controlador_Usuario)
         self.vista_inicio = PantallaInicio(Controlador_Inicio)
-        self.vista_info = PantallaInfo(Controlador_Info)
-        self.vista_destinos= Mapa(Controlador_Destinos)
+       # self.vista_info = PantallaInfo(Controlador_Info)
+       # self.vista_destinos= Mapa(Controlador_Destinos)
         #self.vista_filtro=VistaFiltro(Controlador_Filtro)
-        self.vista_menu=PantallaMenu(Controlador_Menu)
+      #  self.vista_menu=PantallaMenu(Controlador_Menu)
         #self.vista_visita= MapRut(Controlador_Ruta)
 
-        self.ajustar_frame(self.vista_usuario)
-        self.ajustar_frame(self.vista_inicio)
-        self.ajustar_frame(self.vista_menu)
-        self.ajustar_frame(self.vista_destinos)
+       # self.ajustar_frame(self.vista_usuario)
+       # self.ajustar_frame(self.vista_inicio)
+       # self.ajustar_frame(self.vista_menu)
+       # self.ajustar_frame(self.vista_destinos)
         #self.ajustar_frame(self.vista_filtro)
-        self.ajustar_frame(self.vista_info) 
+        #self.ajustar_frame(self.vista_info) 
         #self.ajustar_frame(self.vista_visita)
 
     def ajustar_frame(self, frame):

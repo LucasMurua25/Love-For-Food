@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from tkintermapview import TkinterMapView
-from models.Ubicacion import Ubi
+
 
 class Mapa(ctk.CTk):
 
@@ -86,8 +86,6 @@ class Mapa(ctk.CTk):
         self.map_widget.set_address(self.entry.get())
     #Mostrar marcadores
     def set_marker_event(self):
-        coordenada=Ubi.from_json(["coordenadas"])
-        self.marker_list.append(coordenada)
         current_position = self.map_widget.get_position()
         self.marker_list.append(self.map_widget.set_marker(current_position[0], current_position[1]))
     #Limpiar seccion Marcadores

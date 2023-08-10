@@ -15,7 +15,7 @@ class PantallaMenu(ctk.CTk):
 
         image = Image.open("tkinterlogo.png")
         current_path = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-        image = Image.open(os.path.join(current_path,"image","tkinterlogo.png"))
+        image = Image.open(os.path.join(current_path,"assets","tkinterlogo.png"))
         photo = ImageTk.PhotoImage(image)
         
         # Agregar la imagen de fondo a un widget Label
