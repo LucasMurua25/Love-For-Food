@@ -1,38 +1,20 @@
 [
     {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
+        "id" : "1",
+        "nombre" : "Parrilla Libre",
+        "destino_id" : "2",
+        "hora_inicio" : "2023-12-01T21:30:00."
     },
     {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
+        "id" : "2",
+        "nombre" : "Show Folklorico",
+        "destino_id" : "4",
+        "hora_inicio" : "2023-11-08T21:00:00."
     },
     {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
-    },
-    {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
-    },
-    {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
-    },
-    {
-        "id" : "id",
-        "nombre" : "nombre",
-        "destino_id" : "destino_id",
-        "hora_inicio" : "hora_inicio"
+        "id" : "3",
+        "nombre" : "Show Stand Up",
+        "destino_id" : "6",
+        "hora_inicio" : "2023-10-09T23:00:00."
     }
 ]

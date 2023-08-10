@@ -10,16 +10,16 @@ from views.vista_usuario import PantallaUsuario
 from views.vista_info import PantallaInfo
 from views.vista_inicio import PantallaInicio
 from views.vista_menu import PantallaMenu
-from views.vista_filtro import VistaFiltro
+#from views.vista_filtro import VistaFiltro
 from views.vista_destinos import Mapa
-from views.vista_visita import MapRut
+#from views.vista_visita import MapRut
 from controladores.Controlador_Destinos import ControladorDestinos
 from controladores.Controlador_Info import ControladorInfo
 from controladores.Controlador_Inicio import ControladorInicio
 #from controladores.Controlador_Filtro import ControladorFiltro
 #from controladores.Controlador_Ruta import ControladorRuta
 #from controladores.Controlador_Menu import ControladorMenu
-
+import json
 
 ctk.set_appearance_mode("System")
 
@@ -36,8 +36,8 @@ class App(ctk.CTk):
         # cargar y crear la imagen de fondo
         current_path = os.path.dirname(os.path.realpath(__file__))
         self.bg_image = ctk.CTkImage(
-            Image.open(os.path.join(current_path,"image","tkinterlogo.png")),
-            size=(self.width, self.height))
+            Image.open(os.path.join(current_path,"image","tkinterlogo.png"),
+            size=(self.width, self.height)))
         self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image,text="")
         self.bg_image_label.grid(row=0, column=0)
 
@@ -53,7 +53,7 @@ class App(ctk.CTk):
         #Controlador_Filtro=ControladorFiltro(self, destinos)
         #Controlador_Ruta=ControladorRuta(self)
 
-        self.vista_usuario= PantallaMenu(Controlador_Usuario)
+        self.vista_usuario= PantallaUsuario(Controlador_Usuario)
         self.vista_inicio = PantallaInicio(Controlador_Inicio)
         self.vista_info = PantallaInfo(Controlador_Info)
         self.vista_destinos= Mapa(Controlador_Destinos)

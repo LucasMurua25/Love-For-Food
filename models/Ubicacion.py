@@ -9,7 +9,7 @@ class Ubi:
     def to_json(self):
         return {"id":self.id, 
                 "direccion":self.direccion,
-                "coordenadas":self.coordenadas,}
+                "coordenadas":self.coordenadas}
 
 
     @classmethod

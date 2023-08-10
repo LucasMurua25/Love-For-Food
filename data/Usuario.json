@@ -1,14 +1,14 @@
 [
     {
     "id" : 1,
-    "nombre" : "Lucuas",
+    "nombre" : "Lucas",
     "apellido" : "Murua",
     "historial_rutas" : []
     },
     {
     "id" : 2,
-    "nombre" : "Bruno",
-    "apellido" : "Guantay",
+    "nombre" : "Rolando(Latigo)",
+    "apellido" : "Suarez",
     "historial_rutas" : []
     },
     {

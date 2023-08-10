@@ -8,7 +8,7 @@
         "precio_maximo" : "4500",
         "popularidad" : "3 estrellas",
         "disponibilidad" : "Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "2",
         "imagen" : "LaMonumentalSalta.png"
     },
     {
@@ -20,7 +20,7 @@
         "precio_maximo" : "3400",
         "popularidad" : "2 estrellas",
         "disponibilidad" : "No Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "1",
         "imagen" : "ElBuenGusto.png"
     },
     {
@@ -32,7 +32,7 @@
         "precio_maximo" : "5000",
         "popularidad" : "3.5 estrellas",
         "disponibilidad" : "Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "3",
         "imagen" : "IlSapore.png"
     },
     {
@@ -44,7 +44,7 @@
         "precio_maximo" : "5500",
         "popularidad" : "4 estrellas",
         "disponibilidad" : "Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "4",
         "imagen" : "LaViejaEstacion.png"
     },
     {
@@ -56,19 +56,19 @@
         "precio_maximo" : "3500",
         "popularidad" : "3 estrellas",
         "disponibilidad" : "Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "5",
         "imagen" : "CrostiPollo.png"
     },
     {
         "id" : "6",
-        "nombre" : "El Meson del Hotel Alejandro I",
+        "nombre" : "Restaurante Mesón de la plaza",
         "tipo_cocina" : "Cocina Fusion",  
         "ingredientes" : "Tradicional del norte",
         "precio_minimo" : "4000",
         "precio_maximo" : "15000",
         "popularidad" : "4.5 estrellas",
         "disponibilidad" : "Disponible",
-        "id_ubicacion" : "id_ubicacion",
+        "id_ubicacion" : "6",
         "imagen" : "ElMeson.png"
     }
 ]

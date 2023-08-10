@@ -3,6 +3,7 @@ import customtkinter as ctk
 from customtkinter import CTkLabel, CTkInputDialog
 from PIL import ImageTk, Image
 import json
+import os
 
 class ToplevelWindow(ctk.CTkToplevel):
     def __init__(self, *args, **kwargs):
@@ -14,18 +15,21 @@ class ToplevelWindow(ctk.CTkToplevel):
         self.attributes('-topmost', True)
         
 
-class App(ctk.CTk):
+class VistaFiltro(ctk.CTk):
+    width = 900
+    height = 600
     def __init__(self):
         super().__init__()
         self.title("LoveForFood V1.0")
         self.geometry("650x550")
         
         # Cargar la imagen de fondo
-        image = Image.open("tkinterlogo.png")
-        photo = ImageTk.PhotoImage(image)
+        current_path = os.path.dirname(os.path.realpath(__file__))
+        self.bg_image = ctk.CTkImage( Image.open(os.path.join(current_path,"image","tkinterlogo.png")),
+        size=(self.width, self.height))
     
         # Agregar la imagen de fondo a un widget Label
-        label = CTkLabel(self, text="" ,image=photo)
+        label = CTkLabel(self, text="" ,image=self.bg_image)
         label.place(x=0, y=0, relwidth=1, relheight=1)
         # Agrega un mensaje en el label 
         self.lbl_mensaje = ctk.CTkLabel(self.master, text='¡Selecciona tu destino culinario, de acuerdo a tus preferencias!', font=('Roboto Condensed', 20))
@@ -57,6 +61,6 @@ class App(ctk.CTk):
             self.toplevel_window = ToplevelWindow(self)  # crea una ventana emergente
         else:
             self.toplevel_window.focus()  # Hace foco en la ventana 
-     
-app = App()
-app.mainloop()
+if __name__ == "__main__":
+    app = VistaFiltro()
+    app.mainloop()

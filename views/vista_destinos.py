@@ -1,7 +1,6 @@
 import customtkinter as ctk
 from tkintermapview import TkinterMapView
-
-
+from models.Ubicacion import Ubi
 
 class Mapa(ctk.CTk):
 
@@ -87,6 +86,8 @@ class Mapa(ctk.CTk):
         self.map_widget.set_address(self.entry.get())
     #Mostrar marcadores
     def set_marker_event(self):
+        coordenada=Ubi.from_json(["coordenadas"])
+        self.marker_list.append(coordenada)
         current_position = self.map_widget.get_position()
         self.marker_list.append(self.map_widget.set_marker(current_position[0], current_position[1]))
     #Limpiar seccion Marcadores
@@ -100,6 +101,7 @@ class Mapa(ctk.CTk):
             self.map_widget.set_tile_server("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png")
         elif new_map == "Google Maps":
             self.map_widget.set_tile_server("https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", max_zoom=22)
+    #Agregar JSON
 
 
     def on_closing(self):
@@ -107,6 +109,8 @@ class Mapa(ctk.CTk):
 
     def start(self):
         self.mainloop()
-
+if __name__ == "__main__":
+    app = Mapa()
+    app.mainloop()
 
 
