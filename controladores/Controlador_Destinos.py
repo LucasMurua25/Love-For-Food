@@ -17,5 +17,5 @@ class ControladorDestinos:
             self.app.vista_info.mostrar_info_destino(destino)
             self.app.cambiar_frame(self.app.vista_info)
 
-    def regresar_inicio(self):
+    def regresar_menu(self):
         self.app.cambiar_frame(self.app.vista_menu)

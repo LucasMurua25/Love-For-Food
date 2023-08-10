@@ -8,9 +8,10 @@ class Mapa(ctk.CTk):
     WIDTH = 600
     HEIGHT = 400
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
+    def __init__(self,master=None,controlador=None):
+        super().__init__(master)
+        self.master=master
+        self.controlador=controlador
         self.title(Mapa.APP_NAME)
         self.geometry(str(Mapa.WIDTH) + "x" + str(Mapa.HEIGHT))
         self.resizable(False, False)
@@ -37,6 +38,9 @@ class Mapa(ctk.CTk):
         #Fream o Columna izquierda_left
 
         self.frame_left.grid_rowconfigure(2, weight=1)
+        self.button_0 = ctk.CTkButton(master=self.frame_left,
+                                                text="Volver al Menu",command=self.controlador.regresar_menu,g_color="#FA5F39")
+        self.button_0.grid(pady=(20,0), padx=(20, 20), row=3, column=0)
 
         self.button_1 = ctk.CTkButton(master=self.frame_left,
                                                 text="Marcadores",
@@ -107,8 +111,3 @@ class Mapa(ctk.CTk):
 
     def start(self):
         self.mainloop()
-if __name__ == "__main__":
-    app = Mapa()
-    app.mainloop()
-
-

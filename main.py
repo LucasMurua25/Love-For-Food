@@ -11,7 +11,7 @@ from views.vista_usuario import PantallaUsuario
 from views.vista_info import PantallaInfo
 from views.vista_inicio import PantallaInicio
 from views.vista_menu import PantallaMenu
-#from views.vista_filtro import VistaFiltro
+#from views.vista_filltro import VistaFiltro
 from views.vista_destinos import Mapa
 #from views.vista_visita import MapRut
 from controladores.Controlador_Destinos import ControladorDestinos
@@ -42,7 +42,7 @@ class App(ctk.CTk):
         self.bg_image_label.grid(row=0, column=0)
 
     def inicializar(self):
-       # destinos = DC.from_json("data/DestinoCulinario.json")
+        destinos = DC.cargar_destinos_de_json("data/DestinoCulinario.json")
        # usuarios= Us.from_json("data/Usuario.json")
       #  ubicacion= Ubi.from_json("data/Ubicacion.json")
      #   actividad=Actividad.from_json("data/Actividad.json")
@@ -50,7 +50,7 @@ class App(ctk.CTk):
      #   Controlador_Usuario= ControladorUsuario(self,usuarios)
         Controlador_Inicio= ControladorInicio(self)
        # Controlador_Menu=(self,usuarios)
-       # Controlador_Destinos = ControladorDestinos(self, ubicacion,destinos)
+        Controlador_Destinos = ControladorDestinos(self,destinos)
        # Controlador_Info = ControladorInfo(self,actividad)
         #Controlador_Filtro=ControladorFiltro(self, destinos)
         #Controlador_Ruta=ControladorRuta(self)

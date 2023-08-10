@@ -8,13 +8,14 @@ lista=[]
 
 class MapRut(ctk.CTk):
 
-    APP_NAME = "Destinos en el Mapa"
+    APP_NAME = "Arma Tu Propia Ruta"
     WIDTH = 600
     HEIGHT = 400
     
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
+    def __init__(self, master=None,controlador=None):
+        super().__init__(master)
+        self.master=master
+        self.controlador=controlador
         self.title(MapRut.APP_NAME)
         self.geometry(str(MapRut.WIDTH) + "x" + str(MapRut.HEIGHT))
         self.resizable(False, False)
@@ -39,7 +40,9 @@ class MapRut(ctk.CTk):
         #Fream o Columna izquierda_left
 
         self.frame_left.grid_rowconfigure(2, weight=1)
-
+        self.button_0 = ctk.CTkButton(master=self.frame_left,
+                                                text="Volver al Menu",command=self.controlador.regresar_menu,fg_color="#FA5F39")
+        self.button_0.grid(pady=(50,0), padx=(20, 20), row=6, column=0)
         self.button_1 = ctk.CTkButton(master=self.frame_left,
                                                 text="Destinos señalados",
                                                 command=self.set_marker_event,fg_color="#FA5F39")

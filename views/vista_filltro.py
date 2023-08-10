@@ -20,17 +20,6 @@ class VistaFiltro(ctk.CTk):
     height = 600
     def __init__(self):
         super().__init__()
-        self.title("LoveForFood V1.0")
-        self.geometry("650x550")
-        
-        # Cargar la imagen de fondo
-        current_path = os.path.dirname(os.path.realpath(__file__))
-        self.bg_image = ctk.CTkImage( Image.open(os.path.join(current_path,"assets","tkinterlogo.png")),
-        size=(self.width, self.height))
-    
-        # Agregar la imagen de fondo a un widget Label
-        label = CTkLabel(self, text="" ,image=self.bg_image)
-        label.place(x=0, y=0, relwidth=1, relheight=1)
         # Agrega un mensaje en el label 
         self.lbl_mensaje = ctk.CTkLabel(self.master, text='¡Selecciona tu destino culinario, de acuerdo a tus preferencias!', font=('Roboto Condensed', 20))
         self.lbl_mensaje.place(x=40, y=100)
@@ -45,7 +34,7 @@ class VistaFiltro(ctk.CTk):
         frame_1.children["!ctkcheckbox2"].configure(text="Ingredientes",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox3"].configure(text="Precio Maximo",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox4"].configure(text="Precio Minimo",fg_color="#FA5F39")
-        frame_1.children["!ctkcheckbox5"].configure(text="POpularidad",fg_color="#FA5F39")
+        frame_1.children["!ctkcheckbox5"].configure(text="Popularidad",fg_color="#FA5F39")
         frame_1.children["!ctkcheckbox6"].configure(text="Actividad",fg_color="#FA5F39")  
         #Boton de filtrado
         boton1 = ctk.CTkButton(self, text="Filtrar",  fg_color="#FA5F39", command=self.resultado_filtro)
@@ -61,6 +50,3 @@ class VistaFiltro(ctk.CTk):
             self.toplevel_window = ToplevelWindow(self)  # crea una ventana emergente
         else:
             self.toplevel_window.focus()  # Hace foco en la ventana 
-if __name__ == "__main__":
-    app = VistaFiltro()
-    app.mainloop()

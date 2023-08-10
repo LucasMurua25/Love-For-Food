@@ -1,4 +1,0 @@
-#HiWorld
-from controladores.Controlador_Destinos import ControladorDestinos
-from controladores.Controlador_Destinos import ControladorDestinos
-from controladores.Controlador_Inicio import ControladorInicio

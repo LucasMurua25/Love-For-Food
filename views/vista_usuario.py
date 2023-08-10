@@ -9,23 +9,10 @@ class PantallaUsuario(ctk.CTk):
     width = 900
     height = 600
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.title("Love For Food")
-        self.geometry(f"{self.width}x{self.height}")
-        self.resizable(False, False)
-
-        # cargar y crear la imagen de fondo
-        current_path = os.path.dirname(os.path.realpath(__file__))
-        self.bg_image = ctk.CTkImage(
-            Image.open(os.path.join(current_path,"assets","tkinterlogo.png")),
-            size=(self.width, self.height),
-        )
-        self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image,text="")
-        self.bg_image_label.grid(row=0, column=0)
-
-
+    def __init__(self, master=None,controlador=None):
+        super().__init__(master)
+        self.master=master
+        self.controlador=controlador
         #LOGIN
         #crear el frame de inicio de sesion
         #caracteristicas del fondo de login
@@ -50,13 +37,6 @@ class PantallaUsuario(ctk.CTk):
         )
         self.login_button.grid(row=3, column=0, padx=10, pady=(10, 10))
 
-
-    def iniciar_sesion(self):
-        # Obtener el nombre y apellido ingresados por el usuario
-
-        usuario = self.usuario.get()
-        contrasenia = self.contrasenia.get()
-
     def login_event(self):
         print(
             "Presionó Login - nombre de usuario:",
@@ -64,5 +44,4 @@ class PantallaUsuario(ctk.CTk):
             "contraseña:",
             self.password_entry.get(),
         )
-        self.login_frame.grid_forget()
-        self.login_frame.place_forget()
+        self.controlador.ir_inicio
