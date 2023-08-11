@@ -24,12 +24,6 @@ class DC:
                 "id_ubicacion":self.id_ubicacion,
                 "imagen":self.imagen}
 
-
-    #@classmethod
-    #def from_json(cls, json_data):
-     #   data = json.loads(json_data)
-     #   return cls(data["id"],data["nombre"],data["tipo_cocina"],data["ingredientes"],
-      #             data["precio_minimo"],data["precio_maximo"],data["popularidad"],data["id_ubicacion"],data["imagen"])
     @classmethod
     def cargar_destinos_de_json(cls, archivo):
         with open(archivo, "r") as f:

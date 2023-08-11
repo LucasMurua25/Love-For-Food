@@ -1,21 +1,25 @@
+from logging import makeLogRecord
+from typing import Self
 import click
 import customtkinter as ctk
 from tkintermapview import TkinterMapView
 
 
 
-lista=[]
+
 
 class MapRut(ctk.CTk):
 
     APP_NAME = "Arma Tu Propia Ruta"
-    WIDTH = 600
-    HEIGHT = 400
+    WIDTH = 900
+    HEIGHT = 600
     
-    def __init__(self, master=None,controlador=None):
+    def __init__(self, master,controlador,id):
         super().__init__(master)
         self.master=master
         self.controlador=controlador
+        self.Usuario = id
+        self.destinos={}
         self.title(MapRut.APP_NAME)
         self.geometry(str(MapRut.WIDTH) + "x" + str(MapRut.HEIGHT))
         self.resizable(False, False)
@@ -95,17 +99,19 @@ class MapRut(ctk.CTk):
     #Buscar Lugares por nombre o direccion
     def search_event(self):
         self.map_widget.set_address(self.entry.get())
+
+#Se buscara realizar un historial de ruta por parte del usuario
     #Mostrar marcadores
     def set_marker_event(self):
-        click_position = self.map_widget.get_position()
-        self.marker_list.append(self.map_widget.set_marker(click_position[0], click_position[1]))
-        for direc in lista:
-            if click_position== direc:
-                lista.remove(direc)
-        lista.append(click_position)
-    #Limpiar seccion Marcadores
+        for id in (self.Usuario):
+            if id == (self.destinos.id):
+                self.agregar_marcador(self.destinos.coordenadas, '')
+
+    def agregar_marcador(self,coordenadas, texto):
+        return self.marker_list.append(coordenadas,text=texto)
+    
+        #Limpiar seccion Marcadores
     def clear_marker_event(self):
-        lista.clear()
         for marker in self.marker_list:
             marker.delete()
 
@@ -118,7 +124,7 @@ class MapRut(ctk.CTk):
 
     #Crear Ruta Personalizada
     def create_route(self):
-        path_1 = self.map_widget.set_path(lista)
+        path_1 = self.map_widget.set_path(self.marker_list)
     
     #Borrar Ruta
     def delete_route(self):
@@ -129,3 +135,6 @@ class MapRut(ctk.CTk):
 
     def start(self):
         self.mainloop()
+if __name__ == "__main__":
+    app = MapRut()
+    app.mainloop()

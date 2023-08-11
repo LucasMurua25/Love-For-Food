@@ -33,7 +33,7 @@ class PantallaUsuario(ctk.CTk):
         )
         self.password_entry.grid(row=2, column=0, pady=(10, 10))
         self.login_button = ctk.CTkButton(
-            self.login_frame, text="Login", command=self.login_event, width=200,bg_color="transparent",fg_color="#FA5F39"
+            self.login_frame, text="Login", command=self.login_event, width=200,bg_color="transparent",fg_color="#FF5722"
         )
         self.login_button.grid(row=3, column=0, padx=10, pady=(10, 10))
 

@@ -25,7 +25,8 @@ class Us:
 
 
     @classmethod
-    def from_json(cls, json_data="data\\usuario.json"):
-        data = json.loads(json_data)
-        return cls(data["id"],data["nombre"],data["apellido"],data["historial_rutas"])
+    def cargar_usuarios_de_json(cls, users):
+        with open(users, "r") as f:
+            data = json.load(f)
+        return [cls(**destino) for destino in data]
 

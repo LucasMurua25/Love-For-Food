@@ -3,36 +3,36 @@
     "id" : 1,
     "nombre" : "Lucas",
     "apellido" : "Murua",
-    "historial_rutas" : []
+    "historial_rutas" : [1,3,5]
     },
     {
     "id" : 2,
     "nombre" : "Rolando(Latigo)",
     "apellido" : "Suarez",
-    "historial_rutas" : []
+    "historial_rutas" : [2,1]
     },
     {
     "id" : 3,
     "nombre" : "Ariel",
     "apellido" : "Maurizzio",
-    "historial_rutas" : []
+    "historial_rutas" : [3,6,4]
     },
     {
     "id" : 4,
     "nombre" : "Juan",
     "apellido" : "Bellido",
-    "historial_rutas" : []
+    "historial_rutas" : [2,6,1]
     },
     {
     "id" : 5,
     "nombre" : "Osvaldo",
     "apellido" : "Romano",
-    "historial_rutas" : []
+    "historial_rutas" : [1,6]
     },
     {
     "id" : 6,
     "nombre" : "Cecilia",
     "apellido" : "Velasquez",
-    "historial_rutas" : []
+    "historial_rutas" : [2]
     }
 ]
