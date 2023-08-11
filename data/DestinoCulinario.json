@@ -14,7 +14,7 @@
     {
         "id" : 1,
         "nombre" : "El Buen Gusto",
-        "tipo_cocina" : "Empanadas y Minutas",  
+        "tipo_cocina" : "Tradicional Salteña",  
         "ingredientes" : "Tradicional argentino",
         "precio_minimo" : 1800,
         "precio_maximo" : 3400,

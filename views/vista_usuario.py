@@ -1,15 +1,10 @@
-from click import command
 import customtkinter as ctk
-from customtkinter import CTkLabel
-from PIL import ImageTk, Image
-from tkinter import messagebox
-import os
 
 class PantallaUsuario(ctk.CTk):
     width = 900
     height = 600
 
-    def __init__(self, master=None,controlador=None):
+    def __init__(self, master,controlador=None):
         super().__init__(master)
         self.master=master
         self.controlador=controlador

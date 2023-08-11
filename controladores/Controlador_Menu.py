@@ -7,8 +7,8 @@ class ControladorMenu:
     def a_destinos(self):
         self.app.cambiar_frame(self.app.vista_destinos)
 
-    def a_actividades(self):
-        self.app.cambiar_frame(self.app.vista_info)
+    def a_review(self):
+        self.app.cambiar_frame(self.app.vista_review)
 
     def a_filtro(self):
         self.app.cambiar_frame(self.app.vista_filltro)

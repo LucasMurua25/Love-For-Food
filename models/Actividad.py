@@ -20,6 +20,7 @@ class Actividad:
 
 
     @classmethod
-    def from_json(cls, json_data):
-        data = json.loads(json_data)
-        return cls(data["id"],data["nombre"],data["destino_id"],data["hora_inicio"])
+    def cargar_actividad_json(cls, actividad):
+        with open(actividad, "r") as f:
+            data = json.load(f)
+        return [cls(**actividad) for actividad in data]

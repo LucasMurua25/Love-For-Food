@@ -4,10 +4,6 @@ import click
 import customtkinter as ctk
 from tkintermapview import TkinterMapView
 
-
-
-
-
 class MapRut(ctk.CTk):
 
     APP_NAME = "Arma Tu Propia Ruta"
@@ -135,6 +131,3 @@ class MapRut(ctk.CTk):
 
     def start(self):
         self.mainloop()
-if __name__ == "__main__":
-    app = MapRut()
-    app.mainloop()
