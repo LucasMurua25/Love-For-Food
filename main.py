@@ -11,21 +11,22 @@ from views.vista_usuario import PantallaUsuario
 from views.vista_info import PantallaInfo
 from views.vista_inicio import PantallaInicio
 from views.vista_menu import PantallaMenu
-#from views.vista_filltro import VistaFiltro
+from views.vista_filltro import VistaFiltro
 from views.vista_destinos import Mapa
-#from views.vista_visita import MapRut
+from views.vista_visita import MapRut
 from controladores.Controlador_Destinos import ControladorDestinos
 from controladores.Controlador_Info import ControladorInfo
 from controladores.Controlador_Inicio import ControladorInicio
 #from controladores.Controlador_Filtro import ControladorFiltro
 #from controladores.Controlador_Ruta import ControladorRuta
-#from controladores.Controlador_Menu import ControladorMenu
+from controladores.Controlador_Menu import ControladorMenu
 import os
 
 
 class App(ctk.CTk):
     width = 900
     height = 600
+    ctk.set_appearance_mode("system")
     def __init__(self):
         ctk.CTk.__init__(self)
         self.title("Love For Food")
@@ -43,33 +44,35 @@ class App(ctk.CTk):
 
     def inicializar(self):
         destinos = DC.cargar_destinos_de_json("data/DestinoCulinario.json")
-       # usuarios= Us.from_json("data/Usuario.json")
-      #  ubicacion= Ubi.from_json("data/Ubicacion.json")
-     #   actividad=Actividad.from_json("data/Actividad.json")
+        usuarios= Us.cargar_usuarios_de_json("data/Usuario.json")
+        ubicacion= Ubi.from_json("data/Ubicacion.json")
+        actividad=Actividad.from_json("data/Actividad.json")
 
-     #   Controlador_Usuario= ControladorUsuario(self,usuarios)
+        Controlador_Usuario= ControladorUsuario(self,usuarios)
         Controlador_Inicio= ControladorInicio(self)
-       # Controlador_Menu=(self,usuarios)
-        Controlador_Destinos = ControladorDestinos(self,destinos)
-       # Controlador_Info = ControladorInfo(self,actividad)
-        #Controlador_Filtro=ControladorFiltro(self, destinos)
-        #Controlador_Ruta=ControladorRuta(self)
+        Controlador_Menu=ControladorMenu(self)
 
-       # self.vista_usuario= PantallaUsuario(Controlador_Usuario)
+        Controlador_Destinos = ControladorDestinos(self,destinos,ubicacion)
+        Controlador_Info = ControladorInfo(self,actividad)
+        Controlador_Filtro=ControladorFiltro(self, destinos)
+        Controlador_Ruta=ControladorRuta(self)
+
+        self.vista_usuario= PantallaUsuario(Controlador_Usuario)
         self.vista_inicio = PantallaInicio(Controlador_Inicio)
-       # self.vista_info = PantallaInfo(Controlador_Info)
-       # self.vista_destinos= Mapa(Controlador_Destinos)
-        #self.vista_filtro=VistaFiltro(Controlador_Filtro)
-      #  self.vista_menu=PantallaMenu(Controlador_Menu)
-        #self.vista_visita= MapRut(Controlador_Ruta)
+        self.vista_menu=PantallaMenu(Controlador_Menu)
 
-       # self.ajustar_frame(self.vista_usuario)
-       # self.ajustar_frame(self.vista_inicio)
-       # self.ajustar_frame(self.vista_menu)
-       # self.ajustar_frame(self.vista_destinos)
-        #self.ajustar_frame(self.vista_filtro)
-        #self.ajustar_frame(self.vista_info) 
-        #self.ajustar_frame(self.vista_visita)
+        self.vista_destinos= Mapa(Controlador_Destinos)
+        self.vista_info = PantallaInfo(Controlador_Info)
+        self.vista_filtro=VistaFiltro(Controlador_Filtro)
+        self.vista_visita= MapRut(Controlador_Ruta)
+
+        self.ajustar_frame(self.vista_usuario)
+        self.ajustar_frame(self.vista_inicio)
+        self.ajustar_frame(self.vista_menu)
+        self.ajustar_frame(self.vista_destinos)
+        self.ajustar_frame(self.vista_filtro)
+        self.ajustar_frame(self.vista_info) 
+        self.ajustar_frame(self.vista_visita)
 
     def ajustar_frame(self, frame):
         frame.grid(row=0, column=0, sticky="nsew")

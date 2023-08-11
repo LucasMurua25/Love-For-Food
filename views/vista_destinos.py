@@ -5,13 +5,17 @@ from tkintermapview import TkinterMapView
 class Mapa(ctk.CTk):
 
     APP_NAME = "Destinos en el Mapa"
-    WIDTH = 600
-    HEIGHT = 400
+    WIDTH = 900
+    HEIGHT = 600
 
-    def __init__(self,master=None,controlador=None):
+    def __init__(self,master=None,controlador=None, destinos=None, ubicaciones=None,markers=None):
         super().__init__(master)
         self.master=master
         self.controlador=controlador
+        self.destinos=destinos
+        self.ubicaciones=ubicaciones
+        self.markers=ubicaciones
+        self.destino_selec={}
         self.title(Mapa.APP_NAME)
         self.geometry(str(Mapa.WIDTH) + "x" + str(Mapa.HEIGHT))
         self.resizable(False, False)
@@ -39,18 +43,13 @@ class Mapa(ctk.CTk):
 
         self.frame_left.grid_rowconfigure(2, weight=1)
         self.button_0 = ctk.CTkButton(master=self.frame_left,
-                                                text="Volver al Menu",command=self.controlador.regresar_menu,g_color="#FA5F39")
+                                                text="Volver al Menu",command=self.controlador.regresar_menu,fg_color="#FA5F39")
         self.button_0.grid(pady=(20,0), padx=(20, 20), row=3, column=0)
 
         self.button_1 = ctk.CTkButton(master=self.frame_left,
                                                 text="Marcadores",
                                                 command=self.set_marker_event,fg_color="#FA5F39")
         self.button_1.grid(pady=(20, 0), padx=(20, 20), row=0, column=0)
-
-        self.button_2 = ctk.CTkButton(master=self.frame_left,
-                                                text="Borrar Marcadores",
-                                                command=self.clear_marker_event,fg_color="#FA5F39")
-        self.button_2.grid(pady=(20, 0), padx=(20, 20), row=1, column=0)
 
         self.map_label = ctk.CTkLabel(self.frame_left, text="V i s t a  E n:", anchor="w")
         self.map_label.grid(row=2, column=0, padx=(20, 20), pady=(65, 0))
@@ -90,12 +89,22 @@ class Mapa(ctk.CTk):
         self.map_widget.set_address(self.entry.get())
     #Mostrar marcadores
     def set_marker_event(self):
-        current_position = self.map_widget.get_position()
-        self.marker_list.append(self.map_widget.set_marker(current_position[0], current_position[1]))
-    #Limpiar seccion Marcadores
-    def clear_marker_event(self):
-        for marker in self.marker_list:
-          marker.delete()
+        for ubicacion in (self.markers):
+            self.agregar_marcador(ubicacion.coordenadas, '')
+            
+        #agregar marcador
+
+    def agregar_marcador(self,coordenadas, texto):
+        self.Disponiblidad = ctk.CTkLabel(self, width=30, height=1)
+        self.Popularidad = ctk.CTkLabel(self, width=30, height=1)
+        if self.destino_selec.disponibilidad == 1:
+            f=self.Disponiblidad.config(texto='Abierto')    
+        else:
+            f=self.Disponiblidad.config(texto='Cerrado')
+        texto=self.Popularidad.config(text=f'{self.destino_selec.popularidad} estrellas, Disponibilidad: {f}')
+        
+        return self.map_widget.set_marker(coordenadas, text=texto)
+
 
     #Modificar Vista del mapa
     def change_map(self, new_map: str):
@@ -103,8 +112,6 @@ class Mapa(ctk.CTk):
             self.map_widget.set_tile_server("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png")
         elif new_map == "Google Maps":
             self.map_widget.set_tile_server("https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", max_zoom=22)
-    #Agregar JSON
-
 
     def on_closing(self):
         self.destroy()
