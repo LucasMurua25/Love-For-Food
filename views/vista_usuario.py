@@ -1,8 +1,7 @@
 import customtkinter as ctk
 
-class PantallaUsuario(ctk.CTk):
-    width = 900
-    height = 600
+
+class PantallaUsuario(ctk.CTkFrame):
 
     def __init__(self, master,controlador=None):
         super().__init__(master)

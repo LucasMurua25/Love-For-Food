@@ -1,5 +1,4 @@
 import os
-from typing import Any
 import customtkinter as ctk
 from PIL import Image
 from models.Actividad import Actividad
@@ -33,14 +32,13 @@ class App(ctk.CTk):
         self.geometry(f"{self.width}x{self.height}")
         self.resizable(False, False)
         self.inicializar()
-        self.cambiar_frame(self.vista_inicio)
         # cargar y crear la imagen de fondo
         current_path = os.path.dirname(os.path.realpath(__file__))
         self.bg_image = ctk.CTkImage(
-            Image.open(os.path.join(current_path,"assets","tkinterlogo.png"),
-            size=(self.width, self.height)))
+            Image.open(os.path.join(current_path,"assets","tkinterlogo.png")))
         self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image,text="")
-        self.bg_image_label.grid(row=0, column=0)
+        self.bg_image_label(row=0, column=0)
+        self.cambiar_frame(self.vista_inicio)
 
     def inicializar(self):
         destinos = DC.cargar_destinos_de_json("data/DestinoCulinario.json")

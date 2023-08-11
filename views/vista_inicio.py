@@ -1,5 +1,6 @@
 import customtkinter as ctk
 
+
 class PantallaInicio(ctk.CTk):
     def __init__(self, master=None, controlador=None):
         super().__init__(master)
